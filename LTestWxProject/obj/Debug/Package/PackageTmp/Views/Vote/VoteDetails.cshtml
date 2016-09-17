@@ -1,0 +1,151 @@
+﻿@model Entity.WeChat_VoteInfoEntity
+@{
+    ViewBag.Title = "微活动测试";
+
+    //List<Entity.WeChat_VoteOptionEntity> OptionList = ViewData["OptionList"] as List<Entity.WeChat_VoteOptionEntity>;
+    //Exception Ex = ViewData["Ex"] as Exception;
+    //BLL.VoteRecordBLL VrBllObj = new BLL.VoteRecordBLL();
+
+}
+
+@*
+@section CSS{
+    <link href="@Url.Content("~/Content/votedetails.css")" type="text/css" rel="stylesheet" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1;" name="viewport" />
+}
+
+<div class="D_content">
+
+    <input type="hidden" value="@ViewData["VoteStatus"]" id="VoteStatus" />
+    <input type="hidden" value="@ViewData["LimitReason"]" id="LimitReason" />
+
+    <!--背景-->
+    <div class="D_Nav">      
+
+        <div class="D_Nav_Inner">
+        @if (null != Model)
+        {
+            <img src="@Model.BackgroundImg" class="Img_Nav" />
+            <input type="hidden" id="VoteInfoID" value="@Model.VoteInfoID" />            
+        }
+        </div>
+
+        <div class="D_content_details">
+            <div> <a class="A_Btn_details_close whiteColor" href="javascript:void(0)">关闭</a></div>
+            <div class="D_content_details_text">              
+                @if( Model.Description != null && !string.IsNullOrEmpty( Model.Description ) )
+                {
+                    @Html.Raw(Model.Description)
+                }
+            </div>
+        </div>
+
+    </div>
+
+    <input type="hidden" id="username" value="@ViewBag.NickName" />
+
+    <!--选项-->
+    <div class="D_List">
+
+        @if (null != OptionList && OptionList.Count > 0)
+        {
+            foreach(var item in OptionList )
+            {
+                 <div class="D_item">
+                    <p class="P_item_title">@item.Title</p>
+                    <div class="D_item_img">
+                        <img src="@item.OptionImg" class="Img_Item" />
+                    </div>
+                    <p class="P_item_num" id="P_item_num_@item.OptionID">@VrBllObj.GetVoteNum( item.OptionID )</p>
+                    <a href="javascript:void(0)" dataid="@item.OptionID" class="A_Btn_vote_sign A_Btn_vote_gray whiteColor">
+                        @switch( Convert.ToInt32( ViewData["VoteStatus"].ToString() ) )
+                        {
+                            case (int)Common.VoteProjectStatusEnum.NotStarted:@("未开始");break;
+                            case (int)Common.VoteProjectStatusEnum.Complete:@("已结束");break;
+                            case (int)Common.VoteProjectStatusEnum.HaveVoted:@("已投票");break;
+                            case (int)Common.VoteProjectStatusEnum.Normal:@("投票");break;
+                            case (int)Common.VoteProjectStatusEnum.ReachLimit:@("限制");break;
+                            default:@("限制"); break;
+                        }
+                    </a>
+                </div>
+            }
+            
+            <input type="hidden" id="userid" value="@ViewBag.UserOpenId" />
+        }
+
+        <div style="clear:both;"></div>
+    </div>
+
+</div>*@
+
+@*@section JS{
+
+    <script type="text/javascript">
+        $(function () {
+            $('.A_Btn_details').click(function () {
+                $('.D_content_details').show();
+            });
+
+            $(".A_Btn_details_close").click(function () {
+                $('.D_content_details').hide();
+            });
+
+            //进行初始化
+            InitData();
+
+            function InitData() {
+                var status = $("#VoteStatus").val();
+                var msg = $("#LimitReason").val();
+
+                if (status != 4) {
+                    alert(msg);
+                }
+                else {
+                    BindVoteBtn();
+                }
+            }
+
+            //绑定按钮事件
+            function BindVoteBtn() {
+
+                $(".A_Btn_vote_sign").removeClass('A_Btn_vote_gray');
+                $(".A_Btn_vote_sign").addClass ('A_Btn_vote');
+
+                $(".A_Btn_vote").bind('click',function(){
+                    //投票请求
+                    $.ajax({
+                        url: '/Vote/Voting',
+                        async: false,
+                        data: { userid: $("#userid").val(), nickname: $("#username").val(), voteid: $("#VoteInfoID").val(), optionid: $(this).attr("dataid") },
+                        dataType: "JSON",
+                        type: 'POST',
+                        success: function (dataObj) {
+                            alert(dataObj.Message);
+                            if (dataObj.Status == 1) {
+                                //如果成功,隐藏当前所有按钮,并刷新投票数
+                                DisableBtn();
+                                for (var i = 0; i < dataObj.DataList.length; i++) {
+                                    $("#P_item_num_" + dataObj.DataList[i].OptionID).html(dataObj.DataList[i].VoteNum);
+                                }
+                            }
+                        }
+                    });
+                    return false;
+                });
+            }
+
+            //置灰所有按钮
+            function DisableBtn()
+            {
+                $(".A_Btn_vote_sign").bind('click', function () {
+                    return false;
+                });
+
+                $(".A_Btn_vote_sign").removeClass('A_Btn_vote');
+                $(".A_Btn_vote_sign").addClass('A_Btn_vote_gray');
+            }
+        });
+    </script>
+}*@
+

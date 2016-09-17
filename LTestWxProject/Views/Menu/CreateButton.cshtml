@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "创建自定义菜单";
+}
+
+<h2>创建自定义菜单</h2>
+<a href="/Home/Index">返回首页</a>
+<hr />
+
+@if (ViewBag.Status)
+{
+    <a href="/Menu/QueryMenu">创建成功，点击跳转至获取菜单页面查看菜单</a>
+}
+else{
+    <p>创建失败</p>
+}

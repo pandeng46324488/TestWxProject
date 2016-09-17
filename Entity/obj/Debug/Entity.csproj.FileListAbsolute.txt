@@ -1,0 +1,5 @@
+E:\VisualStudio2010WorkSpace\LTestWxProject\Entity\obj\Debug\ResolveAssemblyReference.cache
+E:\VisualStudio2010WorkSpace\LTestWxProject\Entity\bin\Debug\Entity.dll
+E:\VisualStudio2010WorkSpace\LTestWxProject\Entity\bin\Debug\Entity.pdb
+E:\VisualStudio2010WorkSpace\LTestWxProject\Entity\obj\Debug\Entity.dll
+E:\VisualStudio2010WorkSpace\LTestWxProject\Entity\obj\Debug\Entity.pdb

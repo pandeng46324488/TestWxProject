@@ -1,0 +1,87 @@
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx1fbef25a97739be7&secret=5745d5c5d948ad9fd5ec8be32b9af0c6&code=&grant_type=authorization_code
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"errcode":41008,"errmsg":"missing code, hints: [ req_id: bZlbaA0992ns86 ]"}
+
+|==============|
+Request.ContentType:text/xml,Request.ContentLength:278,UserHostAddress10.99.11.204,UserHostName:10.99.11.204
+    UserAgent:Mozilla/4.0,Url:http://vp-yyeiei-001.ticp.net/validate/validatetoken?signature=baefdc4337ef3492b19242f640343bfa96d60dbc&timestamp=1473763015&nonce=219205867&openid=o-kj9vt-km70aZu-nDMC_3k_ficQ,RequestType:POST,Form.Count:0,FormContent:
+  --- FORM Content:<xml><ToUserName><![CDATA[gh_25857b2728e8]]></ToUserName>
+<FromUserName><![CDATA[o-kj9vt-km70aZu-nDMC_3k_ficQ]]></FromUserName>
+<CreateTime>1473763015</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+
+|==============|
+Request.ContentType:text/xml,Request.ContentLength:511,UserHostAddress10.99.11.204,UserHostName:10.99.11.204
+    UserAgent:Mozilla/4.0,Url:http://vp-yyeiei-001.ticp.net/validate/validatetoken?signature=f990cfc5037f9640c6434b5a1119e0fc029b5897&timestamp=1473763017&nonce=1678476999&openid=o-kj9vt-km70aZu-nDMC_3k_ficQ,RequestType:POST,Form.Count:0,FormContent:
+  --- FORM Content:<xml><ToUserName><![CDATA[gh_25857b2728e8]]></ToUserName>
+<FromUserName><![CDATA[o-kj9vt-km70aZu-nDMC_3k_ficQ]]></FromUserName>
+<CreateTime>1473763017</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1fbef25a97739be7&redirect_uri=http%3a%2f%2fvp-yyeiei-001.ticp.net%2fVote%2fVoteDetails&response_type=code&scope=snsapi_userinfo&state=6#wechat_redirect]]></EventKey>
+<MenuId>411626264</MenuId>
+</xml>
+
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx1fbef25a97739be7&secret=5745d5c5d948ad9fd5ec8be32b9af0c6&code=031QWH8D0pCqC92eLc7D0JdE8D0QWH8P&grant_type=authorization_code
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"access_token":"I_YMJ5OcUNKZB_BDqFxLEJYiNcChL7Egq7BL741gM5NYhO_wSjs_5VGgUNUHIUPjGshuu0I8Wvd7msEhnFxHf-RwSKVLdT9SCC-F2Q58Er0","expires_in":7200,"refresh_token":"Ux_P7HGX2ov8DHneJ0rAUe_ctLQPZElKHJ7U4J79R6c7xNd7cdm5hz4cpptHJnzNxB2dokCekJ5c_jUlFdoAnAnmZ2rmi9cpJGV3CDhiv8k","openid":"o-kj9vt-km70aZu-nDMC_3k_ficQ","scope":"snsapi_userinfo","unionid":"o6OUVwl98qYaLfhZuriy5Kt6MC1s"}
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/sns/userinfo?access_token=I_YMJ5OcUNKZB_BDqFxLEJYiNcChL7Egq7BL741gM5NYhO_wSjs_5VGgUNUHIUPjGshuu0I8Wvd7msEhnFxHf-RwSKVLdT9SCC-F2Q58Er0&openid=o-kj9vt-km70aZu-nDMC_3k_ficQ&lang=zh_CN
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"openid":"o-kj9vt-km70aZu-nDMC_3k_ficQ","nickname":"D.pan","sex":1,"language":"zh_CN","city":"贵港","province":"广西","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/peLvuOnzkjZVzCGDzTwPhB1xKpqrA33NSOG5tGZpRr5aZdcbG9DPhqpic8kciaEYxcjKNDwF9p5lOqnq9cbOfnTze3vOFTdO33\/0","privilege":[],"unionid":"o6OUVwl98qYaLfhZuriy5Kt6MC1s"}
+
+|==============|
+Request.ContentType:text/xml,Request.ContentLength:511,UserHostAddress10.99.11.204,UserHostName:10.99.11.204
+    UserAgent:Mozilla/4.0,Url:http://vp-yyeiei-001.ticp.net/validate/validatetoken?signature=3f5aec21de46f8cfe319381e9c49a4c6d111dfde&timestamp=1473763027&nonce=1020749691&openid=o-kj9vt-km70aZu-nDMC_3k_ficQ,RequestType:POST,Form.Count:0,FormContent:
+  --- FORM Content:<xml><ToUserName><![CDATA[gh_25857b2728e8]]></ToUserName>
+<FromUserName><![CDATA[o-kj9vt-km70aZu-nDMC_3k_ficQ]]></FromUserName>
+<CreateTime>1473763027</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1fbef25a97739be7&redirect_uri=http%3a%2f%2fvp-yyeiei-001.ticp.net%2fVote%2fVoteDetails&response_type=code&scope=snsapi_userinfo&state=6#wechat_redirect]]></EventKey>
+<MenuId>411626264</MenuId>
+</xml>
+
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx1fbef25a97739be7&secret=5745d5c5d948ad9fd5ec8be32b9af0c6&code=031Pa4Sb1OT6Wp0z81Qb1VXZRb1Pa4S9&grant_type=authorization_code
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"access_token":"-0Bei-ZZE-F-wvodnitz52m6fl5sbPjAdA8ZU-MKqEh9WQv6BzBpIIwWbwzOfNjLutrlOEhFEn6P7lC3iyMqW-9xUkiohoIXdEIR00ZN0Jg","expires_in":7200,"refresh_token":"CRQRtIZ29zYuq2fas3LTdypA6sbzZKVFTXegtOfDnbN9FI6eKLBBLSGW986_3Z1nwvN78x9M6PKSh7j7bZDlyN4azpmr1yzTfI_MikPzzMs","openid":"o-kj9vt-km70aZu-nDMC_3k_ficQ","scope":"snsapi_userinfo","unionid":"o6OUVwl98qYaLfhZuriy5Kt6MC1s"}
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/sns/userinfo?access_token=-0Bei-ZZE-F-wvodnitz52m6fl5sbPjAdA8ZU-MKqEh9WQv6BzBpIIwWbwzOfNjLutrlOEhFEn6P7lC3iyMqW-9xUkiohoIXdEIR00ZN0Jg&openid=o-kj9vt-km70aZu-nDMC_3k_ficQ&lang=zh_CN
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"openid":"o-kj9vt-km70aZu-nDMC_3k_ficQ","nickname":"D.pan","sex":1,"language":"zh_CN","city":"贵港","province":"广西","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/peLvuOnzkjZVzCGDzTwPhB1xKpqrA33NSOG5tGZpRr5aZdcbG9DPhqpic8kciaEYxcjKNDwF9p5lOqnq9cbOfnTze3vOFTdO33\/0","privilege":[],"unionid":"o6OUVwl98qYaLfhZuriy5Kt6MC1s"}
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx1fbef25a97739be7&secret=5745d5c5d948ad9fd5ec8be32b9af0c6&code=031I6Ag11kpvuL1HJah11wNzg11I6Agi&grant_type=authorization_code
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"access_token":"lIua3vMA1JkxaIk6qWV6sGRkBWQutgHt5dYRHiEmrfaX9obh0UM9h2wkWp4yrRtxnv_cohj46vGceotydUW9nE7EeToWI1nVMyYm77FbTnY","expires_in":7200,"refresh_token":"BCag998Z9faDIDD0Wh-_b269FmiXQ2i5ZwhQ_hWR-MKV7N88QqN2kSjvgC2dsRU_IO5oUOjZfHSwJz3SsBXZbXHmeqX0Jri6wXUpNd7pFDQ","openid":"o-kj9vt-km70aZu-nDMC_3k_ficQ","scope":"snsapi_userinfo","unionid":"o6OUVwl98qYaLfhZuriy5Kt6MC1s"}
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/sns/userinfo?access_token=lIua3vMA1JkxaIk6qWV6sGRkBWQutgHt5dYRHiEmrfaX9obh0UM9h2wkWp4yrRtxnv_cohj46vGceotydUW9nE7EeToWI1nVMyYm77FbTnY&openid=o-kj9vt-km70aZu-nDMC_3k_ficQ&lang=zh_CN
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"openid":"o-kj9vt-km70aZu-nDMC_3k_ficQ","nickname":"D.pan","sex":1,"language":"zh_CN","city":"贵港","province":"广西","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/peLvuOnzkjZVzCGDzTwPhB1xKpqrA33NSOG5tGZpRr5aZdcbG9DPhqpic8kciaEYxcjKNDwF9p5lOqnq9cbOfnTze3vOFTdO33\/0","privilege":[],"unionid":"o6OUVwl98qYaLfhZuriy5Kt6MC1s"}

@@ -1,0 +1,43 @@
+﻿@model Entity.WxNoPersonalButtonEntity 
+@{
+    ViewBag.Title = "自定义菜单";
+}
+
+<h2>自定义菜单</h2>
+@Html.ActionLink("返回首页", "Index", "Home", null, null)
+<hr />
+
+<div>
+    @if (null != Model && Model.menu != null)
+    {
+        <div>
+            <h3>一级菜单 :数量 @Model.menu.button.Count </h3>
+            @for (int i = 0; i < Model.menu.button.Count; i++)
+            {
+                <div>
+                    <span>类型：@Model.menu.button[i].type </span>
+                    <span>名称：@Model.menu.button[i].name </span>
+                    <span>Key: @Model.menu.button[i].key </span>
+                    <span>Url: @Model.menu.button[i].url </span>
+                    @if (Model.menu.button[i].sub_button != null && Model.menu.button[i].sub_button.Count > 0)
+                    {
+                        <div>
+                            <h4>-------- 一级: @i 此一级下的二级菜单----------</h4>
+                            @for (int j = 0; j < Model.menu.button[i].sub_button.Count; j++)
+                            {
+                                <span>二级类型：@Model.menu.button[i].sub_button[j].type </span>
+                                <span>二级名称：@Model.menu.button[i].sub_button[j].name </span>
+                                <span>二级Key: @Model.menu.button[i].sub_button[j].key </span>
+                                <br />
+                            }
+                        </div>
+                    }
+                </div>
+            }
+            <hr />
+        </div>
+    }
+    else{
+        <h3>无菜单</h3>
+    }
+</div>

@@ -1,0 +1,7 @@
+E:\VisualStudio2010WorkSpace\LTestWxProject\DAL\obj\Debug\ResolveAssemblyReference.cache
+E:\VisualStudio2010WorkSpace\LTestWxProject\DAL\bin\Debug\DAL.dll
+E:\VisualStudio2010WorkSpace\LTestWxProject\DAL\bin\Debug\DAL.pdb
+E:\VisualStudio2010WorkSpace\LTestWxProject\DAL\bin\Debug\Entity.dll
+E:\VisualStudio2010WorkSpace\LTestWxProject\DAL\bin\Debug\Entity.pdb
+E:\VisualStudio2010WorkSpace\LTestWxProject\DAL\obj\Debug\DAL.dll
+E:\VisualStudio2010WorkSpace\LTestWxProject\DAL\obj\Debug\DAL.pdb

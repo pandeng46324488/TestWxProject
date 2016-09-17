@@ -1,0 +1,20 @@
+﻿@model Entity.IPAddressEntity
+@{
+    ViewBag.Title = "Index";
+}
+
+@Html.ActionLink("返回首页","Index","Home","", null)
+
+@if (null != Model && null != Model.ip_list )
+{
+    <div>
+    @for (int i = 1; i <= Model.ip_list.Count(); i++)
+    {
+        if (i % 10 == 0)
+        {
+            <hr />
+        }
+        <span style="margin:5px 10px; border:1px solid #ccc; padding:2px 2em;">@Model.ip_list[i-1]</span>
+    }
+    </div>
+}

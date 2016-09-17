@@ -1,0 +1,214 @@
+﻿* {
+    margin:0;
+    padding:0;
+    font:14px/100% "Courier New",arial,"Hiragino Sans GB","Hiragino Sans GB W3",\5b8b\4f53;
+}
+
+a {
+    text-decoration:none;
+}
+
+/*内容*/
+.D_content {
+    margin:auto;
+    width:100%;
+}
+
+/*导航头部*/
+.D_Nav {
+    /*background:url(../../Images/star.jpg) no-repeat center center;*/
+    min-height:40%;
+    max-height:500px;
+    position:relative;
+    margin:auto;
+    width:100%;
+    text-align:center;
+}
+
+.D_Nav_Inner {
+    position:relative;
+    width:100%;
+    margin:auto;
+    max-width:800px;
+    height:auto;
+    max-height:500px;
+    top:-10%;
+}
+
+/*导航图片*/
+.Img_Nav {
+    width:100%;
+    margin:auto;
+    max-width:800px;
+    height:auto;
+    max-height:500px;
+}
+
+/*活动详情按钮*/
+.A_Btn_details {
+    position:absolute;
+    right:5%;
+    padding:0.5em 2em;
+    background-color:#0aa770;
+    border-radius:0.3em;  
+    top:-60px;  
+}
+
+
+/*活动详情*/
+.D_content_details {
+    display:none;
+    position:fixed;
+    border:1px solid #ccc;
+    background-color:#fff;
+    top:20%;
+    left:0;
+    right:0;
+    width:500px;    
+    max-width:720px;
+    height:350px;
+    overflow-y:auto;
+    margin:auto;
+    padding:20px;
+    text-align:left;
+}
+
+.D_List {
+    width:100%;
+    margin:auto;
+    background-color:#ffc87a;
+    clear:both;
+    max-width:800px;
+    /*height:800px;*/
+}
+
+/*投票选项*/
+.D_item {
+    width:40%;
+    min-width:200px;
+    float:left;
+    padding:2%;
+    margin:2% 3%;
+    border-radius:0.5em;
+    background-color:#fff;
+}
+
+/*图片外层*/
+.D_item_img {
+    width:100%;
+    margin:auto;
+    text-align:center;
+}
+
+.Img_Item {
+    /*width:80%;
+    max-width:200px;
+    height:auto;*/
+    width:100px;
+    height:100px;
+    border-radius:100px;
+}
+
+/*投票按钮*/
+.A_Btn_vote{
+    margin:2% auto;
+    width:40%;
+    background-color: #FFCC33;
+    text-align:center;
+    padding:3% 5%;
+    display:block;
+    border-radius:0.5em;
+}
+
+a.A_Btn_vote:hover {
+    background-color:#ff6a00;
+}
+
+/*置灰按钮*/
+.A_Btn_vote_gray {
+    margin:2% auto;
+    width:40%;
+    background-color: #ccc;
+    text-align:center;
+    padding:3% 5%;
+    display:block;
+    border-radius:0.5em;
+}
+
+/*标题*/
+.P_item_title {
+    font-family: 黑体;
+    font-size: 150%;
+    text-indent: 2em;
+}
+
+/*票数*/
+.P_item_num {
+    margin:2% auto;
+    width:100%;
+    text-align:center;
+}
+
+/*关闭按钮*/
+.A_Btn_details_close {
+    padding: 0.5em 2em;
+    background-color: #0aa770;
+    border-radius: 0.5em;
+    margin: 0.2em 0 0 0.2em;
+    border:1px solid #0aa770;
+    clear:both;
+}
+
+a.A_Btn_details_close:hover {
+    background-color:#fff;
+    color:#0aa770;
+}
+
+/*详情*/
+.D_content_details {
+    width:80%;
+    max-width:542px;
+}
+.D_content_details_text {
+    margin-top:30px;
+}
+
+/*白色字体*/
+.whiteColor {
+    color:#fff;
+}
+
+/*间隔*/
+.rightSpan {
+    margin-right: 4%;
+}
+
+@media only screen and (min-width:321px) and ( max-width:499px){
+    .D_List {
+        padding:5% 0%;
+    }
+
+    .D_item {
+        width:80%;
+        float:none;
+        margin:auto;       
+        display:block;
+        background-color:#fff;
+        margin-top:5%;
+    }
+
+}
+@media screen and (max-width:768px){
+    .D_List {
+        padding:5% 0%;
+    }
+
+    .D_item {
+        width:80%;
+        float:none;
+        margin:auto;
+        display:block;
+        background-color:#fff;
+        margin-top:5%;
+    }
+}

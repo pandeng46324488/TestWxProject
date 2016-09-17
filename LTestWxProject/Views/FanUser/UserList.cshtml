@@ -1,0 +1,40 @@
+﻿@model Entity.WxUserEntity
+@{
+    ViewBag.Title = "微信用户列表";
+}
+
+<style type="text/css">
+    .itemS {
+        padding: 0.5em 2em;
+        border: 1px solid #0094ff;
+        border-radius: 2px;
+        margin: 0.2em;
+        word-break: break-all;
+        display: block;
+        float: left;
+    }
+</style>
+
+@Html.ActionLink("返回", "Index", "Home", null, null)
+
+@if(Model != null)
+{
+    if (Model.data.openid != null)
+    {
+        <div>
+            <p>总数: @Model.total &nbsp; 拉取的个数: @Model.count &nbsp; 下一个: @Model.next_openid </p>
+        @for( int i=1; i<=Model.data.openid.Count(); i++)
+        {            
+            <span class="itemS"> @Model.data.openid[i - 1] </span>
+        }
+        </div>
+    }
+    else{
+        <h3>data.openid列表异常</h3>
+    }
+}
+else{
+    <div>
+        <h2>WxUserEntity为null,异常错误</h2>
+    </div>
+}

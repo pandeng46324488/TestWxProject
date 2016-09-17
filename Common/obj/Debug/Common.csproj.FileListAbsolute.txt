@@ -1,0 +1,5 @@
+E:\VisualStudio2010WorkSpace\LTestWxProject\Common\obj\Debug\ResolveAssemblyReference.cache
+E:\VisualStudio2010WorkSpace\LTestWxProject\Common\bin\Debug\Common.dll
+E:\VisualStudio2010WorkSpace\LTestWxProject\Common\bin\Debug\Common.pdb
+E:\VisualStudio2010WorkSpace\LTestWxProject\Common\obj\Debug\Common.dll
+E:\VisualStudio2010WorkSpace\LTestWxProject\Common\obj\Debug\Common.pdb

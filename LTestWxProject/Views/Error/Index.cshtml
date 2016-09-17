@@ -1,0 +1,19 @@
+﻿@model Exception
+@{
+    ViewBag.Title = "Index";
+}
+
+<style type="text/css">
+    .showDiv {
+        margin:auto;
+        margin-top:15%;
+        border:1px solid #ccc;
+        padding:1em;
+    }
+</style>
+<div class="showDiv">
+    @if (Model != null)
+    {
+        <h3>@Model.Message</h3>
+    }
+</div>

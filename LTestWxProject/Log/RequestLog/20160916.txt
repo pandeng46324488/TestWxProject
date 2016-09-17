@@ -1,0 +1,7 @@
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx1fbef25a97739be7&secret=5745d5c5d948ad9fd5ec8be32b9af0c6&code=&grant_type=authorization_code
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"errcode":41008,"errmsg":"missing code, hints: [ req_id: uV9CQa0921ns81 ]"}

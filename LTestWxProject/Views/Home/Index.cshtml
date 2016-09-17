@@ -1,0 +1,96 @@
+﻿@model Entity.WebPageAccessTokenEntity
+@{
+    ViewBag.Title = "Index";
+    Entity.WxWebPageUserEntity UserInfoObj = ViewData["UserInfoObj"] as Entity.WxWebPageUserEntity;
+}
+
+@if (!ViewBag.Status || null == UserInfoObj )
+{
+    <h3>获取accesstoken失败</h3>
+    <hr />
+    <div>
+        <span>错误信息如下：</span>
+        @{
+            Entity.WxErrorEntity Errors = ViewBag.Errors as Entity.WxErrorEntity;
+        }
+        <div>
+            <p>ErrorCode: @Errors.errcode</p> 
+            <p>ErrorMsg: @Errors.errmsg </p>
+        </div>
+    </div>
+}
+else{
+    <div>
+        <h3>获取信息成功，信息如下：</h3>
+        <hr />
+
+        <div>
+            <p> access_token : @Model.access_token</p>
+            <p> expires_in: @Model.expires_in </p>
+            <p> last_get_time: @Model.last_get_time.ToString("yyyy-MM-dd HH:mm:ss.fff") </p>
+            <p> openid: @Model.openid </p>
+            <p> refresh_token: @Model.refresh_token</p>
+            <p> scope :@Model.scope </p>
+        </div>
+
+        <hr />
+
+        @if (UserInfoObj != null && ViewBag.UserStatus)
+        {
+            <h3>用户信息如下</h3>
+            <div>
+                <p> nickname: @UserInfoObj.nickname </p>
+                <p> headimge: <img src="@UserInfoObj.headimgurl" style="height:auto;width:50px;" /> </p>
+                <p> sex: @if (UserInfoObj.sex == 1) { @("male") }else if(UserInfoObj.sex==2){ @("female") }else{@("未知")} </p>
+                <p> place: @(UserInfoObj.country +  UserInfoObj.province + UserInfoObj.city ) </p>
+            </div>
+        }
+    </div>
+    
+    
+}
+
+<fieldset class="fl">
+        <legend>首页</legend>
+        @Html.ActionLink("获取微信服务器IP列表","GetWxIpList","WxService", new { openid = Model.openid }, new { @class = "aSPan" })
+        @Html.ActionLink("获取用户列表","UserList", "FanUser",new { openid = Model.openid }, new { @class = "aSPan" })
+        @Html.ActionLink("测试POST请求", "CreatePostRequest","OtherTest",new { openid = Model.openid }, new { @class = "aSPan" })
+        @Html.ActionLink("获取自定义菜单列表", "QueryMenu", "Menu", new { openid = Model.openid }, new { @class = "aSPan" })
+        @Html.ActionLink("创建菜单", "CreateButton", "Menu", new { openid = Model.openid }, new { @class="aSPan" })
+        @Html.ActionLink("投票列表", "VoteDetails","Vote", new { openid = Model.openid }, new {@class="aSPan"})
+        @Html.ActionLink("测试EF", "TestEF","OtherTest", new { openid = Model.openid }, new {@class="aSPan"})
+    </fieldset>
+
+<style type="text/css">
+    .aSPan {
+        padding:0.5em 2em;
+        margin:0.3em 0.5em;
+        border-radius:3px;
+        border:1px solid #3eb94e;
+        color:#000;
+        text-decoration:none;
+        width:22%;
+        text-align:center;
+        min-width:120px;
+        display:block;
+        float:left;
+    }
+
+    a.aSPan:hover {
+        background-color:#3eb94e;
+        color:#fff;
+    }
+
+    .fl {
+        margin:12% auto;
+        width:80%;
+        max-width:800px;
+        padding:2em;
+    }
+
+    
+    @@media only screen and (min-width:321px) and ( max-width:499px){
+        .aSPan{width:70%;margin:auto;display:block;float:none; margin:0.8em;}
+    }
+</style>
+

@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "CreatePostRequest";
+}
+
+
+
+<h2>创建一个请求</h2>
+@Html.ActionLink("返回","index","home",null,null)
+<hr />
+
+@using(Html.BeginForm())
+{
+    <p><input type="text" name="ParasA" /></p>
+    <input type="submit" value="提交" />
+}

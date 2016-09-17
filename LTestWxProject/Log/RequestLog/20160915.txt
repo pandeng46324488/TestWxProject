@@ -1,0 +1,56 @@
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx1fbef25a97739be7&secret=5745d5c5d948ad9fd5ec8be32b9af0c6&code=&grant_type=authorization_code
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"errcode":41008,"errmsg":"missing code, hints: [ req_id: BGc4GA0433ns84 ]"}
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx1fbef25a97739be7&secret=5745d5c5d948ad9fd5ec8be32b9af0c6&code=&grant_type=authorization_code
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"errcode":41008,"errmsg":"missing code, hints: [ req_id: D.2mwa0464ns87 ]"}
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx1fbef25a97739be7&secret=5745d5c5d948ad9fd5ec8be32b9af0c6
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"access_token":"cNuYpL9C-g-QL6cGOohw29MRm-FC5gTem9rs5t7C6_hbOXxTNbKWu_88ZPnaFSmkg0QGp6kNstaSz0afANsxPbLXsX1MNZq2pcs8IRSXIsd7L90JtR7rHXPUS2GETmUCZOMhAEARGE","expires_in":7200}
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/cgi-bin/menu/get?access_token=cNuYpL9C-g-QL6cGOohw29MRm-FC5gTem9rs5t7C6_hbOXxTNbKWu_88ZPnaFSmkg0QGp6kNstaSz0afANsxPbLXsX1MNZq2pcs8IRSXIsd7L90JtR7rHXPUS2GETmUCZOMhAEARGE
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"menu":{"button":[{"type":"view","name":"微投票链接","url":"https:\/\/open.weixin.qq.com\/connect\/oauth2\/authorize?appid=wx1fbef25a97739be7&redirect_uri=http%3a%2f%2fvp-yyeiei-001.ticp.net%2fVote%2fVoteDetails&response_type=code&scope=snsapi_userinfo&state=6#wechat_redirect","sub_button":[]}]}}
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx1fbef25a97739be7&secret=5745d5c5d948ad9fd5ec8be32b9af0c6&code=&grant_type=authorization_code
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"errcode":41008,"errmsg":"missing code, hints: [ req_id: vk36fa0038ns50 ]"}
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx1fbef25a97739be7&secret=5745d5c5d948ad9fd5ec8be32b9af0c6
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"access_token":"QmoIr-7O8cFuYgMVGKQUI26fdocNMXqQ35sYPfyeA-WKV3wHWClHVBgkyvUYMYQkPt5-1tPSgEbvNEfibka1eo2Bs0DfkYvIzvYQwVhbd4ONXJXaRCeEMqXJUSZoCFnVZHJeABAFNP","expires_in":7200}
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/cgi-bin/menu/create?access_token=QmoIr-7O8cFuYgMVGKQUI26fdocNMXqQ35sYPfyeA-WKV3wHWClHVBgkyvUYMYQkPt5-1tPSgEbvNEfibka1eo2Bs0DfkYvIzvYQwVhbd4ONXJXaRCeEMqXJUSZoCFnVZHJeABAFNP
+ Method:POST
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData:{"button":[{"type":"view","name":"微投票链接","url":"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1fbef25a97739be7&redirect_uri=http%3a%2f%2fvp-yyeiei-001.ticp.net%2fVote%2fVoteDetails&response_type=code&scope=snsapi_userinfo&state=6#wechat_redirect"},{"type":"view","name":"上传图片","url":"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1fbef25a97739be7&&redirect_uri=http%3a%2f%2fvp-yyeiei-001.ticp.net%2fPhotoTest%2fIndex&response_type=code&scope=snsapi_userinfo&state=6#wechat_redirect"}]} 
+ Response: {"errcode":0,"errmsg":"ok"}
+
+-----------------
+ RequestUrl:https://api.weixin.qq.com/cgi-bin/menu/get?access_token=QmoIr-7O8cFuYgMVGKQUI26fdocNMXqQ35sYPfyeA-WKV3wHWClHVBgkyvUYMYQkPt5-1tPSgEbvNEfibka1eo2Bs0DfkYvIzvYQwVhbd4ONXJXaRCeEMqXJUSZoCFnVZHJeABAFNP
+ Method:GET
+ Accept:text/html,application/xhtml+xml,applicatoin/xml,application/json;q=0.9,*/*;q=0.8
+ PostData: 
+ Response: {"menu":{"button":[{"type":"view","name":"微投票链接","url":"https:\/\/open.weixin.qq.com\/connect\/oauth2\/authorize?appid=wx1fbef25a97739be7&redirect_uri=http%3a%2f%2fvp-yyeiei-001.ticp.net%2fVote%2fVoteDetails&response_type=code&scope=snsapi_userinfo&state=6#wechat_redirect","sub_button":[]},{"type":"view","name":"上传图片","url":"https:\/\/open.weixin.qq.com\/connect\/oauth2\/authorize?appid=wx1fbef25a97739be7&&redirect_uri=http%3a%2f%2fvp-yyeiei-001.ticp.net%2fPhotoTest%2fIndex&response_type=code&scope=snsapi_userinfo&state=6#wechat_redirect","sub_button":[]}]}}

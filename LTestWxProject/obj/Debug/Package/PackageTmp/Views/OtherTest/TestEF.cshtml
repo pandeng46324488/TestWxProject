@@ -1,0 +1,22 @@
+﻿@model Entity.WeChat_VoteInfoEntity
+@{
+    ViewBag.Title = "TestEF";
+    Entity.WeChat_VoteInfoEntity A = ViewData["A"] as Entity.WeChat_VoteInfoEntity;
+    Exception Ex = ViewData["Ex"] as Exception;
+}
+
+@if (null != Ex)
+{
+    <h3>错误信息如下：@Ex.Message</h3>
+    <hr />
+}
+
+@if (A == null)
+{
+    <h3>未获取到数据</h3>
+}
+else{
+    <h3>获取到数据如下：名称 @A.Title </h3>
+}
+
+@Html.ActionLink( "返回", "index","Home")

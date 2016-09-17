@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "上传照片测试";
+
+}
+
+<div>
+    <input type="button" value="上传图片" id="uploadPhoto" />
+    
+    <div id="showDiv" style="display:none;">
+        <img src="" id="preShowImg" />
+    </div>
+
+
+    <input type="hidden" value="" id="serviceImgId" />
+
+</div>
+
+@section JS{
+    
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        $(function ()
+        {
+
+            var Appid, TimeStamp, NonceStr, Signature， AppId ;
+
+            Init();
+
+            //进行初始化，请求服务器获取信息
+            function Init()
+            {
+                $.ajax({ 
+                    url:'GetWebSignature',
+                    type:'POST',
+                    async:true,
+                    dataType:'JSON',                    
+                    data:{},
+                    success:function(dataObj){
+                       TimeStamp = dataObj.timestamp;
+                       NonceStr = dataObj.noncestr;
+                       Signature = dataObj.signature;
+                       AppId = dataObj.appid;
+                       console.log(dataObj);
+                       alert( 't='+ dataObj.timestamp + 'n = '+ dataObj.noncestr + ' s = '+ dataObj.signature + ' appid = '+ dataObj.appid);                        
+                    }
+                });
+            }
+            var wx = {};
+
+            wx.config({
+                debug: true,
+                appId: AppId,
+                timestamp: TimeStamp,
+                nonceStr: NonceStr,
+                signature: Signature,
+                jsApiList: ['chooseImage', 'uploadImage']
+            });
+
+            wx.ready(function ()
+            {
+                //所有的接口必须在config接口获得结果后，config是客户端的一个异步操作结果，如果需要在页面加载时就调用相关的接口，则必须把相关接口放在ready函数中来调用确保正确执行。对于用户触发才可以调用的接口，则可以直接调用。不需要放在ready函数中。
+
+            });
+
+            wx.error(function (res)
+            {
+                //如果config信息验证失败会执行error函数
+
+            });
+
+            //当点击上传图片铵钮时
+            $('#uploadPhoto').click(function ()
+            {
+
+                //选择图片
+                wx.chooseImage({
+                    count: 1, // 默认9
+                    sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+                    sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+                    success: function (res)
+                    {
+                        $("#preShowImg").attr('src', res.localIds);
+                        $('#showDiv').show();
+                        //var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+                    }
+                });
+
+                //上传
+                wx.uploadImage({
+                    localId: $("#preShowImg").attr('src'), // 需要上传的图片的本地ID，由chooseImage接口获得
+                    isShowProgressTips: 1, // 默认为1，显示进度提示
+                    success: function (res)
+                    {
+                        $("#serviceImgId").val(res.serverId);
+                        alert(res.serverId);
+                        //var serverId = res.serverId; // 返回图片的服务器端ID, medioId
+                    }
+                });
+
+            });
+        });
+    </script>
+
+}

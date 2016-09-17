@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "投票列表页";
+}
+
+<link href="@Url.Content("~/Content/CSS/vote_list.css")" rel="stylesheet" />
+<script type="text/javascript" href="@Url.Content("~/Content/Scripts/jquery-1.7.1.min.js")"></script>
+
+@Html.ActionLink("返回", "Index", "Home", null, null )
+
+<hr />
+
+<div class="main_div">
+    <h3>投票列表页</h3>
+    <hr />
+
+    <div class="body_div">
+        <div>主要项目</div>
+
+        <ul>
+            <li>
+                <div>
+                    <h3>项目一</h3>
+                    <div>内容详情1</div>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <h3>项目二</h3>
+                    <div>内容详情2</div>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <h3>项目三</h3>
+                    <div>内容详情3</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="clear"></div>
+</div>
+
+
+
+@section JS{
+    
+    <script type="text/javascript">
+        $(function () {
+        })
+    </script>
+    
+}
